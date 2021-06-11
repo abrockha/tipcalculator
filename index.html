@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titus Tacos</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/style.css"/>
+    
+    
+</head>
+<body>
+    <h1><img src="assets/images/logo.png" class="logo"/>Welcome to Titus Tacos!</h1>
+    <p>Here is the menu:</p>
+    <div>
+        <ul>
+            <li>Shrimp<br><img src="assets/images/shrimptaco.webp"/></li>
+            <li>Ground Beef<br><img src="assets/images/groundbeeftaco.jpg"/></li>
+            <li>Steak<br><img src="assets/images/steaktaco.jpg"/></li>
+            <li>Fish<br><img src="assets/images/fishtaco.jpg"/></li>
+            <li>Chicken<br><img src="assets/images/chickentaco.jpg"/></li>
+        </ul>
+    </div>
+    <div>
+    <form>
+        <label for="numOfTacos">Enter the number of Tacos you want:</label>
+        <input type="text" name="numOfTacos" id="numOfTacos"/><br>
+        <label for="numOfGuests" >How many people are in your party?</label>
+        <input type="text" name="numOfGuests" id="numOfGuests"/><br>
+        <label for="preTip" id="preTip">Pre-Total: </label><br>
+        <div>
+            <input type="radio" name="tip" value=0.15>
+            <label for="tip">15%</label>
+        </div>
+        <div>
+            <input type="radio" name="tip" value=0.18>
+            <label for="tip">18%</label>
+        </div>
+        <div>
+            <input type="radio" name="tip" value=0.21>
+            <label for="tip">21%</label>
+        </div>
+        <div>
+        <input type="radio" name="tip" value="other">
+        <label for="tip">Other: </label>
+        <input type="text" name="tip" id="other" value='dollar value only'><br>
+        </div>
+        <label for="total" id="total">Total: </label>
+        <button type="button" id="calculate" >Calculate Total</button>
+
+
+    </form>
+    </div>
+
+    <script src="assets/scripts/tipcalculator.js"></script>
+</body>
+</html>
+
+
+
+<!-- Proposal
+    1. Menu-like design
+    2. Calculate tips
+    3. Input box # of tacos
+    4. Radio-buttons for 15%, 18%, 21%, Other: - textbox
+    5. Centered design - different tacos at top.
+    6. # of guests -- if 6 and over automatic 21% gratuity
+    7. Different fonts
+    8. Titus color scheme.
+    9. Pictures of tacos!? 
+    10. Tacos price = $3.
