@@ -1,7 +1,13 @@
 // need to use array, objects, primitive data types, this. keyword.
 
 let taco = {
-    price:3,
+    price:[
+        3.00,
+        2.50,
+        3.50,
+        4.00,
+        3.00
+    ],
     meat:[
         "chicken",
         "ground beef",
@@ -12,8 +18,7 @@ let taco = {
 };
 
 
-
-document.getElementById('calculate').addEventListener('click', function(e){
+function calcTip(){
     let numOfTacos = document.getElementById("numOfTacos").value;
     let numOfGuests = document.getElementById("numOfGuests").value;
     let preTip;
@@ -24,15 +29,18 @@ document.getElementById('calculate').addEventListener('click', function(e){
     preTip = numOfTacos * 3;
  document.getElementById('preTip').innerHTML = "Pre-Total: $" + preTip;
 
-    if (numOfGuests >= 6){
-        tipAmount = 0.21;
-        tipTotal = preTip * tipAmount;
-        total = preTip + tipTotal  + otherAmount;
-    }
-    else if (tipAmount == "other"){
+    if  (tipAmount == "other"){
         otherAmount = Number(document.getElementById('other').value);
         tipAmount = 1;
         total = preTip + otherAmount;
+        if (total < ((preTip * .21) + preTip)){
+            total = (preTip *.21) + preTip;
+        }
+    }
+    else if (numOfGuests >= 6){
+        tipAmount = 0.21;
+        tipTotal = preTip * tipAmount;
+        total = preTip + tipTotal  + otherAmount;
 
     }
     else{
@@ -45,4 +53,9 @@ document.getElementById('calculate').addEventListener('click', function(e){
     console.log(tipTotal);
     document.getElementById('total').innerHTML = "Total: $" + total;
     
+}
+
+
+document.getElementById('calculate').addEventListener('click', function(e){
+    calcTip();
 })
