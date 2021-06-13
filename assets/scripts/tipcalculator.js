@@ -2,11 +2,11 @@
 
 let taco = {
     price:[
-        4.00,
+        3.50,
         2.50,
         3.50,
-        3.00,
-        3.00
+        2.50,
+        2.00
     ],
     meat:[
         "Shrimp",
@@ -30,16 +30,16 @@ function calcPreTotal(){
     newButton = document.createElement('BUTTON');
     newButton.innerHTML = "Remove";
 
-    newLI.innerHTML = (numOfTacos + " " + meat + " tacos: " + preTotal);
+    newLI.innerHTML = (numOfTacos + " " + meat + " tacos: " + preTotal.toFixed(2) + "            ");
     newLI.appendChild(newButton);
     document.getElementById("orderlist").appendChild(newLI);
     newButton.onclick = function(){
         preTip -= preTotal;
         this.parentElement.remove();
-        document.getElementById('preTip').innerHTML = "Pre-Total: $" + preTip;
+        document.getElementById('preTip').innerHTML = "Pre-Total: $" + preTip.toFixed(2);
     }
     preTip += preTotal;
-    document.getElementById('preTip').innerHTML = "Pre-Total: $" + preTip;
+    document.getElementById('preTip').innerHTML = "Pre-Total: $" + preTip.toFixed(2);
     console.log(preTip);
     return preTip;
 }
@@ -58,7 +58,7 @@ function calcTip(preTip){
         otherAmount = Number(document.getElementById('other').value);
         tipAmount = 1;
         total = preTip + otherAmount;
-        if (total < ((preTip * .21) + preTip)){
+        if (total < ((preTip * .21) + preTip) && (numOfGuests >= 6)){
             total = (preTip *.21) + preTip;
         }
     }
@@ -66,7 +66,7 @@ function calcTip(preTip){
         tipAmount = 0.21;
         tipTotal = preTip * tipAmount;
         total = preTip + tipTotal  + otherAmount;
-
+        
     }
     else{
         tipTotal = preTip * tipAmount;
@@ -76,7 +76,7 @@ function calcTip(preTip){
     
     console.log(otherAmount);
     console.log(tipTotal);
-    document.getElementById('total').innerHTML = "Total: $" + total;
+    document.getElementById('total').innerHTML = "Total: $" + total.toFixed(2);
     
 }
 

@@ -52,11 +52,12 @@
 
             <button type="button" id="order" >Add to Order</button>
             
-            <ul id="orderlist">
-                <li></li>
-            </ul>
-            <label for="preTip" id="preTip">Pre-Total: </label><br>
-
+                <ul id="orderlist" class='orderlist'>
+                    <li></li>
+                </ul>
+            
+                <label for="preTip" id="preTip">Pre-Total: </label><br>
+            
             
         </form>
         <form>
@@ -79,12 +80,16 @@
             <label for="tip">Other: </label>
             <input type="text" name="tip" id="other" value="dollar value only" onfocus="this.value=''"><br>
             </div>
-            <label for="total" id="total">Total: </label>
             <button type="button" id="calculate" >Calculate Total</button>
+            <br>
+            <label for="total" id="total">Total: </label>
+            
 
 
     </form>
     </div>
+
+    <label for="rating">How would you rate us: <img></label>
 
     <script src="assets/scripts/tipcalculator.js"></script>
 </body>

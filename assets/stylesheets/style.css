@@ -1,3 +1,22 @@
+.orderlist li{
+    display:block;
+    font-weight:normal;
+    text-align:left;
+}
+
+.orderlist{
+    display:block;
+    float: left;
+    text-align:left;
+}
+
+#preTip{
+    font-size:20px;
+    font-weight:bold;
+}
+form ul{
+    float: left;
+}
 
 body{
 background-color: #A2DEE0;
@@ -22,11 +41,7 @@ ul{
     justify-content: space-evenly;
 }
 
-.orderlist{
-    display:flex;
-    flex-direction: column;
-    font-weight:normal;
-}
+
 
 li{
     font-family:Oswald;
