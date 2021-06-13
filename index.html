@@ -26,31 +26,61 @@
         </ul>
     </div>
     <div>
-    <form>
-        <label for="numOfTacos">Enter the number of Tacos you want:</label>
-        <input type="text" name="numOfTacos" id="numOfTacos"/><br>
-        <label for="numOfGuests" >How many people are in your party?</label>
-        <input type="text" name="numOfGuests" id="numOfGuests"/><br>
-        <label for="preTip" id="preTip">Pre-Total: </label><br>
-        <div>
-            <input type="radio" name="tip" value=0.15>
-            <label for="tip">15%</label>
-        </div>
-        <div>
-            <input type="radio" name="tip" value=0.18>
-            <label for="tip">18%</label>
-        </div>
-        <div>
-            <input type="radio" name="tip" value=0.21>
-            <label for="tip">21%</label>
-        </div>
-        <div>
-        <input type="radio" name="tip" value="other">
-        <label for="tip">Other: </label>
-        <input type="text" name="tip" id="other" value='dollar value only'><br>
-        </div>
-        <label for="total" id="total">Total: </label>
-        <button type="button" id="calculate" >Calculate Total</button>
+        <form>
+            <div>
+                <input type="radio" name="meat" value=0>
+                <label for="meat">Shrimp</label>
+            </div>
+            <div>
+                <input type="radio" name="meat" value=1>
+                <label for="meat">Ground Beef</label>
+            </div>
+            <div>
+                <input type="radio" name="meat" value=2>
+                <label for="meat">Steak</label>
+            </div>
+            <div>
+                <input type="radio" name="meat" value=3>
+                <label for="meat">Fish</label>
+            </div>
+            <div>
+                <input type="radio" name="meat" value=4>
+                <label for="meat">Chicken</label>
+            </div>
+            <label for="numOfTacos">Enter the number of Tacos you want:</label>
+            <input type="text" name="numOfTacos" id="numOfTacos" value="whole numbers only" onfocus="this.value=''"/><br>
+
+            <button type="button" id="order" >Add to Order</button>
+            
+            <ul id="orderlist">
+                <li></li>
+            </ul>
+            <label for="preTip" id="preTip">Pre-Total: </label><br>
+
+            
+        </form>
+        <form>
+            <label for="numOfGuests" >How many people are in your party?</label>
+            <input type="text" name="numOfGuests" id="numOfGuests" value="whole numbers only" onfocus="this.value=''"/><br>
+            <div>
+                <input type="radio" name="tip" value=0.15>
+                <label for="tip">15%</label>
+            </div>
+            <div>
+                <input type="radio" name="tip" value=0.18>
+                <label for="tip">18%</label>
+            </div>
+            <div>
+                <input type="radio" name="tip" value=0.21>
+                <label for="tip">21%</label>
+            </div>
+            <div>
+            <input type="radio" name="tip" value="other">
+            <label for="tip">Other: </label>
+            <input type="text" name="tip" id="other" value="dollar value only" onfocus="this.value=''"><br>
+            </div>
+            <label for="total" id="total">Total: </label>
+            <button type="button" id="calculate" >Calculate Total</button>
 
 
     </form>

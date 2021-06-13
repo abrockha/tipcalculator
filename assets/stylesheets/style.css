@@ -21,6 +21,13 @@ ul{
     list-style-type: none;
     justify-content: space-evenly;
 }
+
+.orderlist{
+    display:flex;
+    flex-direction: column;
+    font-weight:normal;
+}
+
 li{
     font-family:Oswald;
     font-size: 20px;
@@ -42,8 +49,8 @@ form{
     justify-content: center;
     flex-direction: column;
     font-family:Oswald;
-    padding-left:700px;
-    padding-right:700px;
+    padding-left:35%;
+    padding-right:35%;
 }
 
 .logo{
@@ -51,3 +58,4 @@ form{
     width:90px;
     float:left;
 }
+
