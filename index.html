@@ -10,7 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="assets/stylesheets/style.css"/>
+
     
+    
+
     
 </head>
 <body>
@@ -64,6 +67,17 @@
             <label for="numOfGuests" >How many people are in your party?</label>
             <input type="text" name="numOfGuests" id="numOfGuests" value="whole numbers only" onfocus="this.value=''"/><br>
             <div>
+                <label for="rateus">Please rate how we are doing!</label>
+                <select name="rateus" id="dropdown">
+                    <option disabled value>Please select one</option>
+                    <option value=1>1 star</option>
+                    <option value=2>2 stars</option>
+                    <option value=3>3 stars</option>
+                    <option value=4>4 stars</option>
+                    <option value=5>5 stars</option>
+                </select>
+            </div>
+            <div>
                 <input type="radio" name="tip" value=0.15>
                 <label for="tip">15%</label>
             </div>
@@ -89,7 +103,7 @@
     </form>
     </div>
 
-    <label for="rating">How would you rate us: <img></label>
+    
 
     <script src="assets/scripts/tipcalculator.js"></script>
 </body>

@@ -18,8 +18,19 @@ let taco = {
 };
 let preTip = 0;
 let newButton;
+let tipTotal;
+let total;
 
 
+
+function getRating(){
+    let rating = "";
+    let dropDownValue = document.getElementById('dropdown').selectedOptions;
+for (i=0;i < dropDownValue.length ; i++){
+   rating += dropDownValue[i].value;
+}
+return rating;
+}
 function calcPreTotal(){
     let numOfTacos = document.getElementById("numOfTacos").value;
     let meatSelection = document.querySelector("input[name=meat]:checked").value;
@@ -49,8 +60,8 @@ function calcTip(preTip){
     let numOfGuests = document.getElementById("numOfGuests").value;
     let tipAmount = document.querySelector("input[name=tip]:checked").value;
     let otherAmount = 0;
-    let total = 0;
-    let tipTotal = 0;
+    total = 0;
+    tipTotal = 0;
     
  
 
@@ -83,6 +94,9 @@ function calcTip(preTip){
 
 document.getElementById('calculate').addEventListener('click', function(e){
     calcTip(preTip);
+
+    window.alert("Your total before tip is: $" + preTip.toFixed(2) + "\nYour tip amount is: $" + tipTotal.toFixed(2) + "\nYour total comes to: $" + total.toFixed(2)
+    + "\nThank you for rating us " + getRating() + " stars!");
 })
 
 document.getElementById('order').addEventListener('click', function(e){

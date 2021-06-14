@@ -74,3 +74,7 @@ form{
     float:left;
 }
 
+.checked {
+    color: orange;
+  }
+  
